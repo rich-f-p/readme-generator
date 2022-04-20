@@ -54,7 +54,12 @@ const questions = [{
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquire.prompt(questions).then((data =>{
+        console.log(data)
+      data ? console.log('Success'): console.log('fail')
+      }))
+}
 
 // Function call to initialize app
 init();
