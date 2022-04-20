@@ -15,6 +15,9 @@ function generateMarkdown(data) {
   return `# ${data.title}
 ## Description 
 ${data.description}
+
+![${data.alt}](${data.image})
+
 # Table of Contents
 1. [Instructions](#Instructions)
 2. [Usage](#Usage)
@@ -33,9 +36,16 @@ ${data.contributions}
 ## Test
 ${data.test}
 ### Questions
-* ${data.email}
-* ${data.github}
+For questions proceed to:
+* [${data.email}](mailto:${data.email})
+* [${data.github}](${data.github})
 `;
 }
-
+// // gpl
+// "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+// license = "";
+// //apache
+// "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+//  //mit
+//  "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
 module.exports = generateMarkdown;
