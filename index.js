@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-const inquire = require('inquirer')
+const inquire = require('inquirer');
+const { finished } = require('stream');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 const markdown = require('./utils/generateMarkdown.js')
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -51,13 +53,17 @@ const questions = [{
 }];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName+'.md',data, (err)=>{
+        if (err) throw err;
+        console.log('file saved')
+    });
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquire.prompt(questions).then((data =>{
         console.log(data)
-      data ? console.log('Success'): console.log('fail')
       }))
 }
 
