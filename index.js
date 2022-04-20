@@ -64,6 +64,8 @@ function writeToFile(fileName, data) {
 function init() {
     inquire.prompt(questions).then((data =>{
         console.log(data)
+        let newRead='file';
+        writeToFile(newRead,generateMarkdown(data));
       }))
 }
 
