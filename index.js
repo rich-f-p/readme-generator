@@ -6,38 +6,48 @@ const markdown = require('./utils/generateMarkdown.js')
 const questions = [{
     type: "input",
     message: "What is the project title?",
+    name: "title",
 },
 {
     type: "input",
     message: "Enter project description",
+    name: "description"
 },
 {
     type: "input",
     message:"Please provide installation instructions",
+    name: "instructions",
 },
 {
     type: "input",
     message:"What is the usage of the application",
+    name: "usage"
 },
 {   
     type:"list",
     message:"What license would you like to attach",
+    name: "license",
+    choices: ["MIT","APACHE","GPL"],
 },
 {
     type: "input",
     message:"Please list contributions",
+    name: "contributions",
 },
 {
     type:"",
     message:"Test",
+    name: "test"
 },
 {
     type: "input",
     message:"Please enter an email",
+    name: "email"
 },
 {
     type:"input",
     message:"Enter GitHub username",
+    name: "github",
 }];
 
 // TODO: Create a function to write README file
