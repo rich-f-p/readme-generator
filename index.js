@@ -16,6 +16,16 @@ const questions = [{
     name: "description"
 },
 {
+    type:"input",
+    message: "Enter image alt description",
+    name: "alt"
+},
+{
+    type: "input",
+    message: "Enter image url",
+    name: "image"
+},
+{
     type: "input",
     message:"Please provide installation instructions",
     name: "instructions",
@@ -75,8 +85,6 @@ init();
 // GIVEN a command-line application that accepts user input
 // WHEN I am prompted for information about my application repository
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// WHEN I enter my project title
-// THEN this is displayed as the title of the README
 // WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
 // THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
 // WHEN I choose a license for my application from a list of options
