@@ -19,8 +19,23 @@ case "none":
 }
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
+function renderLicenseLink(license) {
+  var link = "";
+  switch(license){  
+case "GPL":
+  link = "[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)"
+  break;
+case "APACHE":
+  link = "[License](https://opensource.org/licenses/Apache-2.0)"
+  break;
+case "MIT":
+  link = "[License: MIT](https://opensource.org/licenses/MIT)"
+  break;
+case "none":
+  link = "";
+  break;
+  }
+}
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
@@ -45,7 +60,7 @@ ${data.instructions}
 ## Usage
 ${data.usage}
 ## License
-* ${data.license}
+* 
 ## Contributions
 ${data.contributions}
 ## Test
