@@ -20,16 +20,16 @@ case "none":
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  var link = "";
+  let link = "";
   switch(license){  
 case "GPL":
-  link = "[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)"
+  link = `[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0) : click to learn more`
   break;
 case "APACHE":
-  link = "[License](https://opensource.org/licenses/Apache-2.0)"
+  link = `[License: APACHE](https://opensource.org/licenses/Apache-2.0) : click to learn more`
   break;
 case "MIT":
-  link = "[License: MIT](https://opensource.org/licenses/MIT)"
+  link = `[License: MIT](https://opensource.org/licenses/MIT) : click to learn more`
   break;
 case "none":
   link = "";
@@ -42,9 +42,8 @@ function renderLicenseSection(license) {
   var include = renderLicenseLink(license);
   if(include){
     return `## License
-* ${include}`
+${include}`
   }
-  contents = "";
   return "";
 }
 function licenseTOC(license){
@@ -80,7 +79,7 @@ ${data.test}
 ### Questions
 For questions proceed to:
 * [${data.email}](mailto:${data.email})
-* [${data.github}](${data.github})
+* [${data.github}](https://github.com/${data.github})
 `;
 }
 
