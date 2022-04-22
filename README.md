@@ -16,7 +16,7 @@ The following application is one that allows the user to quickly generate a READ
 ## Instructions
 start by cloning the repository through your terminal, locate the file and open it in an IDE of you choice. Then open your terminal and type "node index.js" and press enter. Then proceed to answer the questions. Modifications can be made to the README file if desired.
 ## Walkthrough video
-[click to watch](https://drive.google.com/file/d/1kmEz0pv2ON56AxQSSEH8Ik9BZOe2iKIE/view?usp=sharing)
+[click to watch](https://drive.google.com/file/d/18n4_EKJHa30JfgVxnPL8ZY62dMZpgeOh/view?usp=sharing)
 ## Usage
 To generate a README file with strict guidelines
 ## License
